@@ -1,0 +1,54 @@
+@import '~swiper/dist/css/swiper.min.css';
+
+.swiper-container {
+  &::before,
+  &::after {
+    content: "";
+    height: 2px;
+    background: #004a03;
+    position: absolute;
+    width: 80%;
+    left: 0;
+    z-index: 100;
+  }
+
+  &::before {
+    top: 30px;
+  }
+
+  &::after {
+    bottom: 5px;
+  }
+}
+
+.swiper-slide {
+  min-height: 400px;
+
+  .slider-text {
+    z-index: 10;
+
+    p {
+      font-size: 1.65rem;
+    }
+  }
+
+  .slider-image {
+    display: none;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .swiper-slide {
+    .slider-image {
+      position: absolute;
+      display: block;
+      width: 60%;
+      height: 100%;
+      z-index: 1;
+      left: 0;
+      bottom: 0;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+}

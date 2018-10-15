@@ -1,0 +1,21 @@
+.hero {
+  max-height: 100vh;
+  background-size: cover;
+  background-position: center;
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  a {
+    border: 2px solid #004a03;
+    background-color: rgba(117, 118, 107, 0.6);
+    padding: 10px 20px;
+    margin: 0 10px;
+  }
+}
+
+.hero::after {
+  content: "";
+  padding-bottom: 70%;
+}
