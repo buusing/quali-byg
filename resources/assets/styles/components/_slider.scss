@@ -1,6 +1,8 @@
 @import '~swiper/dist/css/swiper.min.css';
 
 .swiper-container {
+  padding: 20px 0;
+
   &::before,
   &::after {
     content: "";
@@ -13,11 +15,11 @@
   }
 
   &::before {
-    top: 30px;
+    top: 0;
   }
 
   &::after {
-    bottom: 5px;
+    bottom: 0;
   }
 }
 
@@ -37,6 +39,14 @@
   }
 }
 
+.swiper-button-prev {
+  left: 25px;
+}
+
+.swiper-button-next {
+  right: 25px;
+}
+
 @include media-breakpoint-up(md) {
   .swiper-slide {
     .slider-image {
@@ -48,7 +58,7 @@
       left: 0;
       bottom: 0;
       background-repeat: no-repeat;
-      background-size: cover;
+      background-size: contain;
     }
   }
 }

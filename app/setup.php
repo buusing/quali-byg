@@ -17,6 +17,14 @@ add_action('wp_enqueue_scripts', function () {
     if (is_single() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
     }
+
+    $ajax_params = array(
+        'ajax_url' => admin_url('admin-ajax.php'),
+        'ajax_nonce' => wp_create_nonce('my_nonce'),
+    );
+
+    wp_localize_script('sage/main.js', 'ajax_object', $ajax_params);
+
 }, 100);
 
 /**
@@ -137,6 +145,10 @@ add_action( 'init', function() {
         'singular' => 'Medarbejder',
         'plural' => 'Medarbejdere',
     ] );
+    register_extended_post_type( 'portfolie', [], [
+        'singular' => 'portfolie',
+        'plural' => 'portfolier',
+    ] );
     register_extended_post_type( 'anmeldelser', [], [
         'singular' => 'anmeldelse',
         'plural' => 'anmeldelser',
@@ -157,4 +169,26 @@ add_action( 'init', function() {
 
     ] );
 } );
+
+add_action( 'wp_ajax_get_gallery', function() {
+    $id = $_GET['id'];
+    $post_gallery = get_field('galleri', $id);
+    $output;
+    foreach($post_gallery as $gallery){
+        $output .= '<div class="col-12 col-md-4><img src="'.$gallery['url'].'"></div>';
+    }
+    wp_send_json($output);
+} );
+
+add_action( 'wp_ajax_nopriv_get_gallery', function() {
+    $id = $_GET['id'];
+    $post_gallery = get_field('galleri', $id);
+    $content = get_post_field('post_content', $id);
+    $output = '<div class="col-10 offset-1 text-center">'.get_the_title($id).'</div><div class="col-10 offset-1">'.$content.'</div>'; 
+    foreach($post_gallery as $gallery){
+        $output .= '<div class="col-12 col-sm-6 col-lg-3"><img class="img-fluid" src="'.$gallery['url'].'"></div>';
+    }
+    wp_send_json($output);
+} );
+
 

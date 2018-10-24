@@ -12,14 +12,14 @@
   </div>
 </div>
 <div class="row">
-  <div class="col-10 offset-1 py-5">
+  <div class="col-12 col-md-8 offset-md-2 py-5">
     @if( have_posts() ) @php the_post() @endphp
       {{ the_content() }}
     @endif 
   </div>
 </div>
 @include('partials.team')
-<div class="row bg-background">
+<div class="row">
   <div class="col-12 col-md-6 offset-md-3 text-center">
     <h3 class="h1 py-5">- Hvad siger vores kunder -</h3>
   </div>
@@ -54,13 +54,13 @@
   </div>
 </div>
 <div class="row py-5">
-  <div class="col-12 col-md-8 offset-md-2 text-center">
+</div>
+<div class="row contact-form">
+  <div class="col-12 col-md-6 offset-md-3 text-center">
     <h3 class="h1">Ønsker du at vide mere?</h3>
     <p>Send os en forespørsmål med dine ønsker og behov, så vender vi snarest tilbage til dig.</p>
   </div>
-</div>
-<div class="row contact-form">
-  <div class="col-8 offset-2">
+  <div class="col-6 offset-3">
     @php echo do_shortcode($contact_form) @endphp
   </div>
 </div>
