@@ -1,24 +1,26 @@
 @extends('layouts.app')
 @section('content')
-  <h1>Vi udfører</h1>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light no-padding">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        @php 
-          $taxonomy = get_taxonomy('genre');
-          $terms = get_terms($taxonomy->name); 
-        @endphp
-        @foreach($terms as $term)
-          <li class="nav-item">
-            <a href="#{{ str_replace('&amp;', 'og', strtolower(str_replace(' ', '-', $term->name))) }}" class="nav-link sub-menu-item">{!! $term->name !!}</a>
-          </li>
-        @endforeach
-      </ul>
-    </div>
-  </nav>
+  <div class="container">
+    <h1>Vi udfører</h1>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light no-padding">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navBarGenres" aria-controls="navBarGenres" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navBarGenres">
+        <ul class="navbar-nav mr-auto">
+          @php 
+            $taxonomy = get_taxonomy('genre');
+            $terms = get_terms($taxonomy->name); 
+          @endphp
+          @foreach($terms as $term)
+            <li class="nav-item">
+              <a href="#{{ str_replace('&amp;', 'og', strtolower(str_replace(' ', '-', $term->name))) }}" class="nav-link sub-menu-item">{!! $term->name !!}</a>
+            </li>
+          @endforeach
+        </ul>
+      </div>
+    </nav>
+  </div>
   @php $number = 1; @endphp
   @foreach($terms as $term)
     @php $term_name = str_replace('&amp;', 'og', strtolower(str_replace(' ', '-', $term->name))) @endphp

@@ -6,7 +6,7 @@
     {{-- <h3>{{ $get_hero_text['subtext'] }}</h3> --}}
     <div class="d-flex">
       @foreach( $get_hero_buttons as $button)
-        <a class="w-50 d-flex justify-content-center align-items-center text-center" href="{{ $button['url']}}">{{ $button['text'] }}</a>
+        <a class="w-50 d-flex justify-content-center align-items-center text-center btn" href="{{ $button['url']}}">{{ $button['text'] }}</a>
       @endforeach
     </div>
   </div>
@@ -60,7 +60,7 @@
     <h3 class="h1">Ønsker du at vide mere?</h3>
     <p>Send os en forespørsmål med dine ønsker og behov, så vender vi snarest tilbage til dig.</p>
   </div>
-  <div class="col-6 offset-3">
+  <div class="col-12 col-md-6 offset-md-3">
     @php echo do_shortcode($contact_form) @endphp
   </div>
 </div>

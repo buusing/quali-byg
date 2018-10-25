@@ -1,4 +1,6 @@
-.wrap {
-  margin: 0;
-  padding: 0;
+@include media-breakpoint-up(md) {
+  .wrap {
+    margin: 0;
+    padding: 0;
+  }
 }

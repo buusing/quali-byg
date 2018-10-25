@@ -3,10 +3,15 @@ export default {
     let buttons = document.querySelectorAll('.expand-button');
     buttons.forEach(button => {
       button.addEventListener('click', () => {
-        let id = button.parentNode.parentNode.parentNode.id;
+        let parent = button.parentNode.parentNode.parentNode;
+        let id = parent.id;
         let readMoreContainer = document.querySelector(`.${id}`);
         if(button.innerHTML == 'Læs mere'){
           button.innerHTML = 'Læs mindre';
+          parent.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+          })
         }else{
           button.innerHTML = 'Læs mere';
         }

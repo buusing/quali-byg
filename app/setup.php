@@ -79,6 +79,17 @@ add_action('after_setup_theme', function () {
      * @see resources/assets/styles/layouts/_tinymce.scss
      */
     add_editor_style(asset_path('styles/main.css'));
+
+    add_image_size('width-300', 300, 300);
+    add_image_size('width-400', 400, 400);
+    add_image_size('width-500', 500, 500);
+    add_image_size('width-600', 600, 600);
+    add_image_size('width-700', 700, 700);
+    add_image_size('width-800', 800, 800);
+    add_image_size('width-900', 900, 900);
+    add_image_size('width-1000', 1000, 1000);
+    add_image_size('width-1200', 1200, 1200);
+    add_image_size('width-1600', 1600, 1600);
 }, 20);
 
 /**
@@ -184,10 +195,61 @@ add_action( 'wp_ajax_nopriv_get_gallery', function() {
     $id = $_GET['id'];
     $post_gallery = get_field('galleri', $id);
     $content = get_post_field('post_content', $id);
-    $output = '<div class="col-10 offset-1 text-center">'.get_the_title($id).'</div><div class="col-10 offset-1">'.$content.'</div>'; 
-    foreach($post_gallery as $gallery){
-        $output .= '<div class="col-12 col-sm-6 col-lg-3"><img class="img-fluid" src="'.$gallery['url'].'"></div>';
+    $output = '<div class="gallery-wrapper"><div class="col-10 offset-1 text-center">'.get_the_title($id).'</div><div class="col-10 offset-1 mb-5">'.$content.'</div>'; 
+    foreach($post_gallery as $index => $gallery){
+        $class;
+        switch($index){
+            case 0:
+            case 5:
+            case 9:
+            case 14:
+            case 16:
+            case 18:
+            case 21:
+            case 22:
+            case 25:
+            case 31:
+            case 32:
+                $class = 'img-300';
+                break;
+            case 1:
+            case 2:
+            case 4:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+            case 13:
+            case 17:
+            case 19:
+            case 23:
+            case 24:
+            case 26:
+            case 28:
+            case 30:
+            case 33:
+                $class = 'img-400';
+                break;
+            case 3:
+                $class = 'img-600';
+                break;
+            case 6:
+            case 11:
+            case 15:
+            case 20:
+            case 27:
+            case 29:
+                $class = 'img-500';
+                break;
+            default:
+                $class = 'img-300';
+                break;
+        };
+        $img_src = wp_get_attachment_image_url( $gallery['id'], 'medium' );
+        $img_srcset = wp_get_attachment_image_srcset( $gallery['id'], 'medium' );
+        $output .= '<div class="portfolio__item"><img class="'.$class.'" src="'. esc_url( $img_src ) .'" srcset="'.esc_attr( $img_srcset ).'"></div>';
     }
+    $output .= '</div>';
     wp_send_json($output);
 } );
 

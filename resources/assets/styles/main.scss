@@ -1,4 +1,5 @@
 @import "common/variables";
+@import url('https://fonts.googleapis.com/css?family=Exo+2:100,300');
 
 /** Import everything from autoload */
 @import "./autoload/**/*";
@@ -20,6 +21,7 @@
 @import "components/hero";
 @import "components/slider";
 @import "components/haandvaerk";
+@import "components/portfolio";
 @import "layouts/header";
 @import "layouts/sidebar";
 @import "layouts/footer";

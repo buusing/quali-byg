@@ -1,7 +1,7 @@
 import axios from 'axios';
 export default {
   init() {
-    let projects = document.querySelectorAll('.portfolie');
+    let projects = document.querySelectorAll('.portfolie-wrapper');
     projects.forEach(project => {
       let id = project.dataset.id;
       project.addEventListener('click', () => {
