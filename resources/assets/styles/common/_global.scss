@@ -8,3 +8,52 @@ body {
   /* csslint ignore: selector-list-comma-newline-after */
   font-family: 'Exo 2', sans-serif;
 }
+
+p {
+  font-size: 1rem;
+}
+
+h1,
+.h1 {
+  font-weight: 100;
+  font-size: 3rem;
+}
+
+h2,
+.h2 {
+  font-weight: 100;
+  font-size: 2rem;
+}
+
+h3,
+.h3 {
+  font-size: 1.2rem;
+}
+
+.font-thin {
+  font-weight: 100;
+}
+
+@include media-breakpoint-up(md) {
+  h1,
+  .h1 {
+    font-size: 4rem;
+  }
+
+  h2,
+  .h2 {
+    font-size: 2.75rem;
+  }
+
+  h3,
+  .h3 {
+    font-size: 1.75rem;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  h1,
+  .h1 {
+    font-size: 5.5rem;
+  }
+}

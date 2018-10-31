@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-<div class="hero d-flex justify-content-center align-items-center" style="background-image: url({{ App::theFeaturedImage() }});">
+<div class="hero d-flex justify-content-center align-items-center" style="background-image: linear-gradient(rgba(255,255,255,0.15), rgba(255,255,255,0.15)), url({{ App::theFeaturedImage() }});">
   <div class="d-flex flex-column align-items-center">
     <h1 class="text-center">{{ $get_hero_text['text'] }}</h1>
     {{-- <h3>{{ $get_hero_text['subtext'] }}</h3> --}}
@@ -21,7 +21,7 @@
 @include('partials.team')
 <div class="row">
   <div class="col-12 col-md-6 offset-md-3 text-center">
-    <h3 class="h1 py-5">- Hvad siger vores kunder -</h3>
+    <h3 class="py-5 font-thin">Hvad siger vores kunder</h3>
   </div>
   <div class="col-12 no-padding">
     @php
@@ -34,7 +34,7 @@
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
           @while( $query->have_posts() ) @php $query->the_post() @endphp
-            <div class="swiper-slide d-flex justify-content-end align-items-end">
+            <div class="swiper-slide d-flex justify-content-end align-items-center">
               @if( has_post_thumbnail() )
                 <div class="slider-image" style="background-image: url({{ the_post_thumbnail_url() }});"></div>
               @endif
