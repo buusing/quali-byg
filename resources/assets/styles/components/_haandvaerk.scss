@@ -3,6 +3,11 @@
   overflow-y: hidden;
   transition: max-height 0.2s ease-out;
 
+  .genre-image {
+    background-position: center;
+    background-size: contain;
+  }
+
   &.open {
     max-height: none;
   }

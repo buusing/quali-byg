@@ -33,7 +33,7 @@
         <img class="img-fluid" src="{{ $image['url'] }}">
       </div>
       <div class="col-12 col-md-6 no-padding">
-        <div class="pt-5 pb-2 px-5">
+        <div class="pt-3 pt-md-5 pb-3 px-3 px-md-5">
           <p class="h2">{!! $term->name !!}</p>
           <p>{{ $term->description }}</p>
           <a class="btn btn-primary expand-button mx-auto haandvaerk-button">Læs mere</a>
@@ -55,20 +55,17 @@
       @endphp
       @if($term_query->have_posts() )
         @while($term_query->have_posts() ) @php $term_query->the_post() @endphp
-        <div class="row @if($number % 2 == 0) flex-row-reverse @endif">
-          <div class="col-12 col-md-6 no-padding d-flex align-items-center">
-            @if( has_post_thumbnail() )
-              <img class="img-fluid" src="{{ the_post_thumbnail_url() }}">
-            @else
-              <img class="img-fluid" src="{{$image['url']}}" alt="">
-            @endif
+          <div class="col-12">
+            <div class="row @if($number % 2 == 0) flex-row-reverse @endif">
+              <div class="col-12 col-md-6 no-padding d-flex align-items-center genre-image" style="background-image: url({{$image['url']}});">
+              </div>
+              <div class="col-12 col-md-6 no-padding">
+                <div class="pt-5 pb-2 px-5">
+                  {{ the_content() }}
+                </div>
+              </div>
+            </div>  
           </div>
-          <div class="col-12 col-md-6 no-padding">
-            <div class="pt-5 pb-2 px-5">
-              {{ the_content() }}
-            </div>
-          </div>
-        </div>
         @endwhile
       @endif 
     </div> <!-- End of term query -->
