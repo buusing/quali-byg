@@ -55,7 +55,7 @@
       @endphp
       @if($term_query->have_posts() )
         @while($term_query->have_posts() ) @php $term_query->the_post() @endphp
-        <div class="d-flex @if($number % 2 == 0) flex-row-reverse @endif">
+        <div class="row @if($number % 2 == 0) flex-row-reverse @endif">
           <div class="col-12 col-md-6 no-padding d-flex align-items-center">
             @if( has_post_thumbnail() )
               <img class="img-fluid" src="{{ the_post_thumbnail_url() }}">
