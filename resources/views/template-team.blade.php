@@ -1,6 +1,8 @@
 {{--
   Template Name: Team Template
 --}}
+@extends('layouts.app')
+@section('content')
 <div class="row">
   @php
     $query = new WP_Query( array(
@@ -19,3 +21,4 @@
     @endwhile
   @endif
 </div>
+@endsection
