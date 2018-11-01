@@ -34,7 +34,7 @@
       </div>
       <div class="col-12 col-md-6 no-padding">
         <div class="pt-5 pb-2 px-5">
-          <p class="h1">{!! $term->name !!}</p>
+          <p class="h2">{!! $term->name !!}</p>
           <p>{{ $term->description }}</p>
           <a class="btn btn-primary expand-button mx-auto haandvaerk-button">Læs mere</a>
         </div>
