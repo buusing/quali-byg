@@ -34,9 +34,12 @@
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
           @while( $query->have_posts() ) @php $query->the_post() @endphp
-            <div class="swiper-slide d-flex justify-content-end align-items-center">
+            <div class="swiper-slide d-flex justify-content-end align-items-center flex-wrap">
               @if( has_post_thumbnail() )
                 <div class="slider-image" style="background-image: url({{ the_post_thumbnail_url() }});"></div>
+                <div class="col-12 d-md-none">
+                  <img class="img-fluid" src="{{ the_post_thumbnail_url() }}">
+                </div>
               @endif
               <div class="col-12 col-md-6 slider-text mb-3 px-5 pr-md-5">
                 {{ the_content() }}
