@@ -1,5 +1,6 @@
 export default {
   init() {
+    console.log("heJ");
     let buttons = document.querySelectorAll('.expand-button');
     buttons.forEach(button => {
       button.addEventListener('click', () => {

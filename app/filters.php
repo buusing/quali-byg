@@ -13,6 +13,10 @@ add_filter('body_class', function (array $classes) {
         }
     }
 
+    if(is_page_template('template-haandvaerk.blade.php')) {
+        $classes[] = 'håndværk';
+    }
+
     /** Add class if sidebar is active */
     if (display_sidebar()) {
         $classes[] = 'sidebar-primary';
