@@ -58,7 +58,7 @@
         <div class="d-flex @if($number % 2 == 0) flex-row-reverse @endif">
           <div class="col-12 col-md-6 no-padding d-flex align-items-center">
             @if( has_post_thumbnail() )
-              <img src="{{ the_post_thumbnail_url() }}">
+              <img class="img-fluid" src="{{ the_post_thumbnail_url() }}">
             @else
               <img class="img-fluid" src="{{$image['url']}}" alt="">
             @endif
