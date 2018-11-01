@@ -15,7 +15,7 @@ import common from './routes/common';
 import home from './routes/home';
 import aboutUs from './routes/about';
 import archive from './routes/archive';
-import portfolie from './routes/portfolie';
+import portefolio from './routes/portfolie';
 
 /** Populate Router instance with DOM routes */
 const routes = new Router({
@@ -28,7 +28,7 @@ const routes = new Router({
 
   archive,
 
-  portfolie,
+  portefolio,
 });
 
 // Load Events
