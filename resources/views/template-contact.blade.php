@@ -9,7 +9,7 @@
   </div>
   <div class="container">
     <div class="row py-5 border-top">
-      <div class="col-12 col-md-8 d-flex flex-column flex-lg-row no-padding">
+      <div class="col-12 col-md-8 d-flex flex-column flex-lg-row align-items-lg-center no-padding">
         @if(has_post_thumbnail())
           <img class="img-fluid" src="{!! the_post_thumbnail_url() !!}" alt="">
         @endif
