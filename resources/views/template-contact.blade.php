@@ -23,7 +23,11 @@
     </div>
   </div>
   <div class="row contact-form">
-    <div class="col-6 offset-3">
+    <div class="col-12 col-md-6 offset-md-3 text-center">
+      <h3 class="h2">Ønsker du at vide mere?</h3>
+      <p>Send os en forespørsmål med dine ønsker og behov, så vender vi snarest tilbage til dig.</p>
+    </div>
+    <div class="col-12 col-md-4 offset-md-4">
       @php echo do_shortcode($contact_form) @endphp
     </div>
   </div>
