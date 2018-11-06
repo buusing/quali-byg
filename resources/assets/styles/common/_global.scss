@@ -38,6 +38,11 @@ h3,
   font-weight: 100;
 }
 
+.px-6 {
+  padding-left: 5rem!important;
+  padding-right: 5rem!important;
+}
+
 @include media-breakpoint-up(md) {
   h1,
   .h1 {

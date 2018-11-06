@@ -49,6 +49,11 @@
 
 @include media-breakpoint-up(md) {
   .swiper-slide {
+    .slider-text {
+      background: rgba(255,255,255,0.4);
+      padding: 2rem;
+    }
+
     .slider-image {
       position: absolute;
       display: block;
@@ -59,6 +64,7 @@
       bottom: 0;
       background-repeat: no-repeat;
       background-size: contain;
+      background-position: center;
     }
   }
 }
