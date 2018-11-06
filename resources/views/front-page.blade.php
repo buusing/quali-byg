@@ -19,7 +19,7 @@
   </div>
   <div class="col-12">
     @if($image = get_field('stort_billede'))
-      <img src="{{ $image['url'] }}">
+      <img class="img-fluid" src="{{ $image['url'] }}">
     @endif
   </div>
 </div>
