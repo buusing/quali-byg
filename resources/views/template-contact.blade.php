@@ -11,7 +11,7 @@
     <div class="row py-5 border-top">
       <div class="col-12 col-md-8 d-flex no-padding">
         @if(has_post_thumbnail())
-          <img src="{!! the_post_thumbnail_url() !!}" alt="">
+          <img class="img-fluid" src="{!! the_post_thumbnail_url() !!}" alt="">
         @endif
         <div class="pl-5">
           <h3>Erik Damgaard</h3>

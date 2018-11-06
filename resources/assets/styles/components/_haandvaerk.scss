@@ -7,9 +7,18 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    padding-bottom: 50%;
   }
 
   &.open {
     max-height: none;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .genres {
+    .genre-image {
+      padding-bottom: 0;
+    }
   }
 }

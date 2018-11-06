@@ -1,10 +1,10 @@
 // import external dependencies
 import 'jquery';
 import { library, dom } from '@fortawesome/fontawesome-svg-core';
-import { faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faPhone, faBars } from '@fortawesome/free-solid-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
-library.add(faEnvelope, faFacebook, faInstagram, faPhone);
+library.add(faEnvelope, faFacebook, faInstagram, faPhone, faBars);
 
 // Import everything from autoload
 import "./autoload/**/*"
