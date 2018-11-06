@@ -9,11 +9,11 @@
   </div>
   <div class="container">
     <div class="row py-5 border-top">
-      <div class="col-12 col-md-8 d-flex no-padding">
+      <div class="col-12 col-md-8 d-flex flex-column flex-lg-row no-padding">
         @if(has_post_thumbnail())
           <img class="img-fluid" src="{!! the_post_thumbnail_url() !!}" alt="">
         @endif
-        <div class="pl-5">
+        <div class="pl-lg-5">
           <h3>Erik Damgaard</h3>
           <h3><i class="far fa-envelope"></i><a href="mailto:qb@quali-byg.dk">qb@quali-byg.dk</a></h3>
           <h3>Havrehøjvej 10 3751 Østermarie Bornholm</h3>
