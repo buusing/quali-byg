@@ -26,7 +26,7 @@
 @include('partials.team')
 <div class="row">
   <div class="col-12 col-md-6 offset-md-3 text-center">
-    <h3 class="py-5 font-thin">Hvad siger vores kunder</h3>
+    <h2 class="py-5 font-thin">Hvad siger vores kunder</h2>
   </div>
   <div class="col-12 no-padding">
     @php
@@ -65,10 +65,10 @@
 </div>
 <div class="row contact-form">
   <div class="col-12 col-md-6 offset-md-3 text-center">
-    <h3 class="h1">Ønsker du at vide mere?</h3>
+    <h3 class="h2">Ønsker du at vide mere?</h3>
     <p>Send os en forespørsmål med dine ønsker og behov, så vender vi snarest tilbage til dig.</p>
   </div>
-  <div class="col-12 col-md-6 offset-md-3">
+  <div class="col-12 col-md-4 offset-md-4">
     @php echo do_shortcode($contact_form) @endphp
   </div>
 </div>
