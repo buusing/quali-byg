@@ -12,7 +12,7 @@
   </div>
 </div>
 <div class="row">
-  <div class="col-12 col-md-8 offset-md-2 py-5">
+  <div id="om-os" class="col-12 col-md-8 offset-md-2 py-5">
     @if( have_posts() ) @php the_post() @endphp
       {{ the_content() }}
     @endif 
@@ -46,7 +46,7 @@
                   <img class="img-fluid" src="{{ the_post_thumbnail_url() }}">
                 </div>
               @endif
-              <div id="om-os" class="col-12 col-md-6 slider-text mb-3 px-5 pr-md-5">
+              <div class="col-12 col-md-6 slider-text mb-3 px-5 pr-md-5">
                 {{ the_content() }}
                 <p class="text-center">{{ the_title() }}</p>
               </div>
