@@ -6,7 +6,7 @@
     {{-- <h3>{{ $get_hero_text['subtext'] }}</h3> --}}
     <div class="d-flex">
       @foreach( $get_hero_buttons as $button)
-        <a class="w-50 d-flex justify-content-center align-items-center text-center btn" href="{{ $button['url']}}">{{ $button['text'] }}</a>
+        <a class="w-50 d-flex justify-content-center align-items-center text-center text-white btn" href="{{ $button['url']}}">{{ $button['text'] }}</a>
       @endforeach
     </div>
   </div>
@@ -16,6 +16,11 @@
     @if( have_posts() ) @php the_post() @endphp
       {{ the_content() }}
     @endif 
+  </div>
+  <div class="col-12">
+    @if($image = get_field('stort_billede'))
+      <img src="{{ $image['url'] }}">
+    @endif
   </div>
 </div>
 @include('partials.team')
