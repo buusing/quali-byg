@@ -30,7 +30,7 @@
   </div>
   <div class="row contact-form">
     <div class="col-12 col-md-6 offset-md-3 text-center">
-      <h3 class="h2">Ønsker du at vide mere?</h3>
+      <h3 class="h2">Fangede vi din interesse</h3>
       <p>Send os en forespørsmål med dine ønsker og behov, så vender vi snarest tilbage til dig.</p>
     </div>
     <div class="col-12 col-md-4 offset-md-4">

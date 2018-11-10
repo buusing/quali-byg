@@ -3,6 +3,11 @@
 --}}
 @extends('layouts.app')
 @section('content')
+<div class="row">
+  <div class="col-12 col-8 col-offset-2">
+    {{ the_content() }}
+  </div>
+</div>
 <div class="row justify-content-center px-2 teamet">
   @php
     $query = new WP_Query( array(
