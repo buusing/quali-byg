@@ -5,7 +5,11 @@
 @section('content')
 <div class="row">
   <div class="col-12 col-8 col-offset-2">
-    {{ the_content() }}
+    @if( have_posts())
+      @while( have_posts() ) @php the_post() @endphp
+        {{ the_content() }}
+      @endwhile
+    @endif
   </div>
 </div>
 <div class="row justify-content-center px-2 teamet">
