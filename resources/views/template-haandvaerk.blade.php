@@ -57,7 +57,7 @@
         @while($term_query->have_posts() ) @php $term_query->the_post() @endphp
           <div class="col-12">
             <div class="row @if($number % 2 == 0) flex-row-reverse @endif">
-              <div class="col-12 col-md-6 no-padding d-flex align-items-center genre-image" style="background-image: url({{$image['url']}});">
+              <div class="col-12 col-md-6 no-padding d-flex align-items-center genre-image" style="background-image: url({{ get_the_post_thumbnail_url() }});">
               </div>
               <div class="col-12 col-md-6 no-padding">
                 <div class="pt-5 pb-2 px-5">
@@ -67,6 +67,7 @@
             </div>  
           </div>
         @endwhile
+        @php wp_reset_query() @endphp
       @endif 
     </div> <!-- End of term query -->
     @php $number++ @endphp

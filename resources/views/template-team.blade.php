@@ -3,7 +3,7 @@
 --}}
 @extends('layouts.app')
 @section('content')
-<div class="row justify-content-center px-2">
+<div class="row justify-content-center px-2 teamet">
   @php
     $query = new WP_Query( array(
       'post_type' => 'medarbejder',

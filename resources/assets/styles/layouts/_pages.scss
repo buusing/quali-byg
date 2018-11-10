@@ -2,6 +2,10 @@
   background-color: $blue-fade;
 }
 
+.teamet {
+  background-color: $green-fade;
+}
+
 @include media-breakpoint-up(md) {
   .wrap {
     margin: 0;
