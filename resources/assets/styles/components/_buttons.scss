@@ -1,8 +1,11 @@
 a.btn {
-  border: 2px solid #004a03;
   background-color: rgba(117, 118, 107, 0.6);
   padding: 10px 20px;
   margin: 0 10px;
   white-space: unset;
   border-radius: 0;
+
+  &:hover {
+    font-weight: 700;
+  }
 }

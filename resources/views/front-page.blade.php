@@ -4,14 +4,14 @@
   <div class="d-flex flex-column align-items-center">
     <h1 class="text-center">{{ $get_hero_text['text'] }}</h1>
     {{-- <h3>{{ $get_hero_text['subtext'] }}</h3> --}}
-    <div class="d-flex">
+    <div class="d-flex mt-4 col-12 col-md-10 col-lg-8">
       @foreach( $get_hero_buttons as $button)
         <a class="w-50 d-flex justify-content-center align-items-center text-center text-white btn" href="{{ $button['url']}}">{{ $button['text'] }}</a>
       @endforeach
     </div>
   </div>
 </div>
-<div class="row">
+<div class="row om-os">
   <div id="om-os" class="col-12 col-md-8 offset-md-2 py-5">
     @if( have_posts() ) @php the_post() @endphp
       {{ the_content() }}

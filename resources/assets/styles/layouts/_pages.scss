@@ -1,3 +1,7 @@
+.om-os {
+  background-color: $blue-fade;
+}
+
 @include media-breakpoint-up(md) {
   .wrap {
     margin: 0;
