@@ -3,8 +3,9 @@
 --}}
 @extends('layouts.app')
 @section('content')
-<div class="container">
-  <div class="row">
+<div class="teamet">
+  <div class="container">
+  <div class="row ">
     <div class="col-12 col-8 col-offset-2">
       @if( have_posts())
         @while( have_posts() ) @php the_post() @endphp
@@ -13,7 +14,7 @@
       @endif
     </div>
   </div>
-  <div class="row justify-content-center px-2 teamet">
+  <div class="row justify-content-center px-2">
     @php
       $query = new WP_Query( array(
         'post_type' => 'medarbejder',
@@ -32,4 +33,5 @@
     @endif
   </div>
   @endsection
+</div>
 </div>
