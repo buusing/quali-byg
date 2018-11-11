@@ -26,10 +26,10 @@
   </div>
   <div class="container-fluid">
     @foreach($terms as $index => $term)
-      @php $term_name = str_replace('&amp;', 'og', strtolower(str_replace(' ', '-', $term->name))) @endphp
+      @php( $term_name = str_replace('&amp;', 'og', strtolower(str_replace(' ', '-', $term->name))) )
       <div id="{{ $term_name }}" class="row @if($index % 2 == 0) flex-row-reverse @endif" style="background-color: {{ get_field('background_color', $term) }}">
         <div class="col-12 col-md-6 no-padding">
-          @php $image = get_field('image', $term) @endphp
+          @php( $image = get_field('image', $term) )
           <img class="img-fluid" src="{{ $image['url'] }}">
         </div>
         <div class="col-12 col-md-6 no-padding">
@@ -57,7 +57,10 @@
           @while($term_query->have_posts() ) @php $term_query->the_post() @endphp
             <div class="col-12" style="background-color: {{ get_field('background_color', $term) }}">
               <div class="row @if($index % 2 == 0) flex-row-reverse @endif">
-                <div class="col-12 col-md-6 no-padding d-flex align-items-center genre-image" style="background-image: url({{ get_the_post_thumbnail_url() }});">
+                {{-- <div class="col-12 col-md-6 no-padding d-flex align-items-center genre-image" style="background-image: url({{ get_the_post_thumbnail_url() }});">
+                </div> --}}
+                <div class="col-12 col-md-6 no-padding d-flex align-items-center genre-image">
+                  <img class="img-fluid" src="{{ get_the_post_thumbnail_url() }}">
                 </div>
                 <div class="col-12 col-md-6 no-padding">
                   <div class="pt-5 pb-2 px-5">
