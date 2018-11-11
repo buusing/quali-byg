@@ -235,9 +235,9 @@ add_action( 'wp_ajax_get_gallery', function() {
                 $class = 'img-300';
                 break;
         };
-        $img_src = wp_get_attachment_image_url( $gallery['id'], 'medium' );
-        $img_srcset = wp_get_attachment_image_srcset( $gallery['id'], 'medium' );
-        $output .= '<div class="portfolio__item"><img class="'.$class.'" src="'. esc_url( $img_src ) .'" srcset="'.esc_attr( $img_srcset ).'"></div>';
+        $img_src = wp_get_attachment_image_url( $gallery['id'], 'full' );
+        $img_srcset = wp_get_attachment_image_srcset( $gallery['id'], 'full' );
+        $output .= '<div class="portfolio__item"><a class="gallery-image" href="'.$img_src.'"><img class="'.$class.'" src="'. esc_url( $img_src ) .'" srcset="'.esc_attr( $img_srcset ).'"></a></div>';
     }
     $output .= '</div>';
     wp_send_json($output);
@@ -297,9 +297,9 @@ add_action( 'wp_ajax_nopriv_get_gallery', function() {
                 $class = 'img-300';
                 break;
         };
-        $img_src = wp_get_attachment_image_url( $gallery['id'], 'medium' );
-        $img_srcset = wp_get_attachment_image_srcset( $gallery['id'], 'medium' );
-        $output .= '<div class="portfolio__item"><img class="'.$class.'" src="'. esc_url( $img_src ) .'" srcset="'.esc_attr( $img_srcset ).'"></div>';
+        $img_src = wp_get_attachment_image_url( $gallery['id'], 'full' );
+        $img_srcset = wp_get_attachment_image_srcset( $gallery['id'], 'full' );
+        $output .= '<div class="portfolio__item"><a class="gallery-image" href="'.$img_src.'"><img class="'.$class.'" src="'. esc_url( $img_src ) .'" srcset="'.esc_attr( $img_srcset ).'"></a></div>';
     }
     $output .= '</div>';
     wp_send_json($output);

@@ -4,9 +4,7 @@
 
 @extends('layouts.app')
 @section('content')
-  <div class="container">
-    <h1>Kontakt</h1>
-  </div>
+  @include('partials.page-header')
   <div class="container">
     <div class="row py-5 border-top">
       <div class="col-12 col-md-8 d-flex flex-column flex-lg-row align-items-lg-center no-padding">

@@ -2,6 +2,8 @@
 @section('content')
   <div class="container">
     <h1>Vi udfører</h1>
+  </div>
+  <div class="container-fluid">
     <nav class="navbar navbar-expand-lg navbar-light bg-light no-padding">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navBarGenres" aria-controls="navBarGenres" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>

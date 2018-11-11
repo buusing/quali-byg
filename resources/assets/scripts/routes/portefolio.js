@@ -1,4 +1,5 @@
 import axios from 'axios';
+
 export default {
   init() {
     let projects = document.querySelectorAll('.portfolie-wrapper');
@@ -18,6 +19,7 @@ export default {
             behavior: 'smooth',
             block: 'start',
           });
+          $('.gallery-image').magnificPopup({type:'image'});
         }).catch(err => {
           console.log(err);
         });

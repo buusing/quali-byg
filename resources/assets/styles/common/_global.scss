@@ -43,6 +43,10 @@ h3,
   padding-right: 5rem !important;
 }
 
+.bg-grey-faded {
+  background-color: $grey-fade;
+}
+
 @include media-breakpoint-up(md) {
   h1,
   .h1 {
