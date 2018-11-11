@@ -3,11 +3,11 @@
 --}}
 @extends('layouts.app')
 @section('content')
-@include('partials.page-header')
 <div class="teamet">
   <div class="container">
   <div class="row py-5">
     <div class="col-12 col-md-8 offset-md-2">
+      <h1 class="h2 text-center">{{ App::title() }}</h1>
       @if( have_posts())
         @while( have_posts() ) @php the_post() @endphp
           {{ the_content() }}
