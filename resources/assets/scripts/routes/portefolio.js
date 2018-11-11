@@ -1,4 +1,5 @@
 import axios from 'axios';
+import 'magnific-popup/dist/jquery.magnific-popup.min.js';
 
 export default {
   init() {
@@ -19,7 +20,12 @@ export default {
             behavior: 'smooth',
             block: 'start',
           });
-          $('.gallery-image').magnificPopup({type:'image'});
+          $('.gallery-image').magnificPopup({
+            type:'image',
+            gallery: {
+              enabled:true,
+            },
+          });
         }).catch(err => {
           console.log(err);
         });
