@@ -57,10 +57,7 @@
           @while($term_query->have_posts() ) @php $term_query->the_post() @endphp
             <div class="col-12" style="background-color: {{ get_field('background_color', $term) }}">
               <div class="row @if($index % 2 == 0) flex-row-reverse @endif">
-                {{-- <div class="col-12 col-md-6 no-padding d-flex align-items-center genre-image" style="background-image: url({{ get_the_post_thumbnail_url() }});">
-                </div> --}}
-                <div class="col-12 col-md-6 no-padding d-flex align-items-center genre-image">
-                  <img class="img-fluid" src="{{ get_the_post_thumbnail_url() }}">
+                <div class="col-12 col-md-6 no-padding d-flex align-items-center genre-image" style="background-image: url({{ get_the_post_thumbnail_url() }});">
                 </div>
                 <div class="col-12 col-md-6 no-padding">
                   <div class="pt-5 pb-2 px-5">
