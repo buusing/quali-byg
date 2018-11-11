@@ -18,6 +18,7 @@
         </div>
       </div>
       <div class="col-12 col-md-4 google-map">
+        {{ do_shortcode('[wpgmza id="1"]') }}
       </div>
     </div>
   </div>
