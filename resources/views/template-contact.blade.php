@@ -17,18 +17,23 @@
           <h3>Havrehøjvej 10 3751 Østermarie Bornholm</h3>
         </div>
       </div>
-      <div class="col-12 col-md-4"></div>
+      <div class="col-12 col-md-4 google-map">
+      </div>
     </div>
   </div>
-  <div class="row contact-form">
-    <div class="col-12 col-md-6 offset-md-3 text-center">
-      <h3 class="h2">Ønsker du at vide mere?</h3>
-      <p>Send os en forespørsmål med dine ønsker og behov, så vender vi snarest tilbage til dig.</p>
-    </div>
-    <div class="col-12 col-md-4 offset-md-4">
-      @php echo do_shortcode($contact_form) @endphp
+  <div class="container-fluid">
+    <div class="row contact-form">
+      <div class="col-12 col-md-6 offset-md-3 text-center">
+        <h3 class="h2">Ønsker du at vide mere?</h3>
+        <p>Send os en forespørsmål med dine ønsker og behov, så vender vi snarest tilbage til dig.</p>
+      </div>
+      <div class="col-12 col-md-4 offset-md-4">
+        @php echo do_shortcode($contact_form) @endphp
+      </div>
     </div>
   </div>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAs_eGMuX5oVkWr1sXetETnqGZQnKgqJKc&callback=initMap"
+    async defer></script>
 </div>
 
 
