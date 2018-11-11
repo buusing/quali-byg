@@ -26,10 +26,10 @@
   </div>
   <div class="container-fluid">
     @foreach($terms as $index => $term)
-      @php( $term_name = str_replace('&amp;', 'og', strtolower(str_replace(' ', '-', $term->name))) )
+      @php $term_name = str_replace('&amp;', 'og', strtolower(str_replace(' ', '-', $term->name))) @endphp
       <div id="{{ $term_name }}" class="row @if($index % 2 == 0) flex-row-reverse @endif" style="background-color: {{ get_field('background_color', $term) }}">
         <div class="col-12 col-md-6 no-padding">
-          @php( $image = get_field('image', $term) )
+          @php $image = get_field('image', $term) @endphp
           <img class="img-fluid" src="{{ $image['url'] }}">
         </div>
         <div class="col-12 col-md-6 no-padding">
