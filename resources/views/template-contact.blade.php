@@ -18,7 +18,9 @@
         </div>
       </div>
       <div class="col-12 col-md-4 google-map">
-        @php echo do_shortcode('[wpgmza id="1"]') @endphp
+        @if(get_field('google-maps'))
+          @php echo do_shortcode(get_field('google_maps')) @endphp
+        @endif
       </div>
     </div>
   </div>
