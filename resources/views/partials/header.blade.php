@@ -2,8 +2,8 @@
   <a href="mailto:qb@quali-byg.dk"><i class="far fa-envelope" style="margin-right: 10px"></i>qb@quali-byg.dk</a>
   <a><i class="fas fa-phone fa-rotate-90" style="margin-right: 10px"></i>Man-Frekl.09.00-15.30</a>
   <div class="d-none d-lg-flex mb-0">
-  	<a href="https://facebook.com" class="mr-2 facebook-logo"></a>
-    <a href="https://facebook.com" class="mr-2 instagram-logo"></a>
+  	<a href="https://www.facebook.com/QualiByg-ApS-1394714237514815/" class="mr-2 facebook-logo"></a>
+    <a href="https://www.instagram.com/qualibyg_aps/" class="mr-2 instagram-logo"></a>
   </div>
 </div>
 <nav class="navbar navbar-expand-lg @if(is_front_page()) frontpage @endif">

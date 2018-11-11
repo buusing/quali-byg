@@ -18,12 +18,14 @@
         {{ the_content() }}
       @endif 
     </div>
-    <div class="col-12">
-      @if($image = get_field('stort_billede'))
-        <img class="img-fluid" src="{{ $image['url'] }}">
-      @endif
-    </div>
   </div>
+</div>
+<div>
+  @if($image = get_field('stort_billede'))
+    <img class="img-fluid" src="{{ $image['url'] }}">
+  @endif
+</div>
+<div class="container-fluid">
   @include('partials.team')
   <div class="row">
     <div class="col-12 col-md-6 offset-md-3 text-center">
