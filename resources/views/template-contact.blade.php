@@ -18,7 +18,7 @@
         </div>
       </div>
       <div class="col-12 col-md-4 google-map">
-        {{ do_shortcode('[wpgmza id="1"]') }}
+        @php echo do_shortcode('[wpgmza id="1"]') @endphp
       </div>
     </div>
   </div>
