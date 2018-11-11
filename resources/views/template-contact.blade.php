@@ -32,8 +32,6 @@
       </div>
     </div>
   </div>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAs_eGMuX5oVkWr1sXetETnqGZQnKgqJKc&callback=initMap"
-    async defer></script>
 </div>
 
 

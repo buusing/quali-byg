@@ -18,6 +18,8 @@ add_action('wp_enqueue_scripts', function () {
         wp_enqueue_script('comment-reply');
     }
 
+    wp_enqueue_script('google-maps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAs_eGMuX5oVkWr1sXetETnqGZQnKgqJKc&callback=initMap', false, true);
+
     $ajax_params = array(
         'ajax_url' => admin_url('admin-ajax.php'),
         'ajax_nonce' => wp_create_nonce('my_nonce'),
