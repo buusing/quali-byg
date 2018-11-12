@@ -43,6 +43,15 @@
     width: 100%;
   }
 
+  .work-navigation {
+    flex-wrap: wrap;
+
+    li {
+      flex: 0 0 20%;
+      text-align: center;
+    }
+  }
+
   .logo {
     width: 200px;
   }
