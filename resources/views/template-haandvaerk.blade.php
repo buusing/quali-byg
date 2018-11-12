@@ -63,7 +63,7 @@
                 </div> --}}
                 @if($youtube = get_field('youtube'))
                   <div class="col-12 col-md-6 no-padding d-flex align-items-center genre-image">
-                    {{ $youtube }}
+                    {!! $youtube !!}
                   </div>
                 @else 
                   <div class="col-12 col-md-6 no-padding d-flex align-items-center genre-image">
