@@ -60,7 +60,7 @@
                 {{-- <div class="col-12 col-md-6 no-padding d-flex align-items-center genre-image" style="background-image: url({{ get_the_post_thumbnail_url() }});">
                 </div> --}}
                 <div class="col-12 col-md-6 no-padding d-flex align-items-center genre-image">
-                  <img src="{{ get_the_post_thumbnail_url() }}">
+                  <img class="img-fluid" src="{{ get_the_post_thumbnail_url() }}">
                 </div>
                 <div class="col-12 col-md-6 no-padding">
                   <div class="pt-5 pb-2 px-5">
