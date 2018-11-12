@@ -20,7 +20,7 @@
         </div>
       </div>
       <div class="col-12 col-md-4 google-map">
-        @if($map = get_field('google-maps'))
+        @if($map = get_field('google_maps'))
           @php echo do_shortcode($map) @endphp
         @endif
       </div>
