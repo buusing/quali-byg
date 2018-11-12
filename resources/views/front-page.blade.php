@@ -6,7 +6,7 @@
     {{-- <h3>{{ $get_hero_text['subtext'] }}</h3> --}}
     <div class="d-flex mt-4 col-12 col-md-10 col-lg-8">
       @foreach( $get_hero_buttons as $button)
-        <a class="w-50 d-flex justify-content-center align-items-center text-center text-white btn" href="{{ $button['url']}}">{{ $button['text'] }}</a>
+        <a class="w-50 d-flex justify-content-center align-items-center text-center btn" href="{{ $button['url']}}">{{ $button['text'] }}</a>
       @endforeach
     </div>
   </div>

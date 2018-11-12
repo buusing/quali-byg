@@ -6,6 +6,7 @@ export default {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
+      loop: true,
     });
   },
   finalize() {
