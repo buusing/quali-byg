@@ -68,7 +68,7 @@
                   <div class="pt-5 pb-2 px-5">
                     {{ the_content() }}
                     @if( ($term_query->current_post + 1) == ($term_query->post_count) )
-                      <a class="btn btn-primary close-button mx-auto haandvaerk-button">Luk</a>
+                      <a class="btn close-button mx-auto haandvaerk-button">Læs mindre</a>
                     @endif
                   </div>
                 </div>

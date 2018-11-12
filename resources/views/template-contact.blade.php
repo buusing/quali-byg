@@ -4,7 +4,9 @@
 
 @extends('layouts.app')
 @section('content')
-  @include('partials.page-header')
+  <div class="py-5">
+    @include('partials.page-header')
+  </div>
   <div class="container">
     <div class="row py-5 border-top">
       <div class="col-12 col-md-8 d-flex flex-column flex-lg-row align-items-lg-center no-padding">
@@ -18,8 +20,8 @@
         </div>
       </div>
       <div class="col-12 col-md-4 google-map">
-        @if(get_field('google-maps'))
-          @php echo do_shortcode(get_field('google_maps')) @endphp
+        @if($map = get_field('google-maps'))
+          @php echo do_shortcode($map) @endphp
         @endif
       </div>
     </div>
