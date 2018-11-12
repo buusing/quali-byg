@@ -7,7 +7,7 @@
   <div class="p-5">
     @include('partials.page-header')
   </div>
-  <div class="container-fluid">
+  <div class="container">
     <div class="row">
       @php
         $portfolio_query = new WP_Query(array(

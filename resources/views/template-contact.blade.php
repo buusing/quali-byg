@@ -9,14 +9,28 @@
   </div>
   <div class="container">
     <div class="row py-5 border-top">
-      <div class="col-12 col-md-8 d-flex flex-column flex-lg-row align-items-lg-center no-padding">
+      <div class="col-12 col-md-4">
         @if(has_post_thumbnail())
           <img class="img-fluid" src="{!! the_post_thumbnail_url() !!}" alt="">
         @endif
-        <div class="pl-lg-5">
-          <h3>Erik Damgaard</h3>
-          <h3><i class="far fa-envelope"></i><a href="mailto:qb@quali-byg.dk">qb@quali-byg.dk</a></h3>
-          <h3>Havrehøjvej 10 3751 Østermarie Bornholm</h3>
+      </div>
+      <div class="col-12 col-md-4">
+        <div>
+          <div class="d-flex flex-column text-center">
+            <p><i class="fas fa-phone"></i></p>
+            <p class="mb-0">Erik Damgaard</p>
+            <p>4037 7757</p>
+          </div>
+          <div class="d-flex flex-column text-center">
+            <p><i class="fas fa-map-marker-alt"></i></p>
+            <p class="mb-0">Havrehøjvej 10</p> 
+            <p class="mb-0">3751 Østermarie</p>
+            <p>Bornholm</p>
+          </div>
+          <div class="d-flex flex-column text-center">
+            <p><i class="far fa-envelope"></i></p>
+            <a href="mailto:qb@quali-byg.dk">qb@quali-byg.dk</a>
+          </div>
         </div>
       </div>
       <div class="col-12 col-md-4 google-map">

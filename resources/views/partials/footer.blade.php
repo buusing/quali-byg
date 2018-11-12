@@ -5,5 +5,8 @@
       <a target="_blank" href="https://www.facebook.com/QualiByg-ApS-1394714237514815/" class="mr-2 facebook-logo"></a>
       <a target="_blank" href="https://www.instagram.com/qualibyg_aps/" class="mr-2 instagram-logo"></a>
     </div>
+    <p class="text-center">
+      Copyright © {{ date("Y") }} QualiByg Aps
+    </p>
   </div>
 </footer>
