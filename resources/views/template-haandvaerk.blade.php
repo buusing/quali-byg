@@ -61,9 +61,15 @@
               <div class="row @if($index % 2 == 0) flex-row-reverse @endif">
                 {{-- <div class="col-12 col-md-6 no-padding d-flex align-items-center genre-image" style="background-image: url({{ get_the_post_thumbnail_url() }});">
                 </div> --}}
-                <div class="col-12 col-md-6 no-padding d-flex align-items-center genre-image">
-                  <img class="img-fluid" src="{{ get_the_post_thumbnail_url() }}">
-                </div>
+                @if($youtube = get_field('youtube'))
+                  <div class="col-12 col-md-6 no-padding d-flex align-items-center genre-image">
+                    {{ $youtube }}
+                  </div>
+                @else 
+                  <div class="col-12 col-md-6 no-padding d-flex align-items-center genre-image">
+                    <img class="img-fluid" src="{{ get_the_post_thumbnail_url() }}">
+                  </div>
+                @endif
                 <div class="col-12 col-md-6 no-padding">
                   <div class="pt-5 pb-2 px-5">
                     {{ the_content() }}
