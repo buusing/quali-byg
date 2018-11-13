@@ -31,6 +31,8 @@
     <div class="row gallery-container">
       
     </div>
+  </div>
+  <div class="container-fluid no-padding">
     <div class="row contact-form">
       <div class="col-12 col-md-6 offset-md-3 text-center">
         <h3 class="h2">Fangede vi din interesse?</h3>

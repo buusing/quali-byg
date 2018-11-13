@@ -1,7 +1,12 @@
 <!doctype html>
 <html {!! get_language_attributes() !!}>
   @include('partials.head')
-  <body @php body_class('bg-grey-faded') @endphp>
+  @if( !is_page('team') )
+    @php($class = 'bg-grey-faded')
+  @else
+    @php($class = 'bg-white')
+  @endif
+  <body @php body_class($class) @endphp>
     @php do_action('get_header') @endphp
     @include('partials.header')
     <div class="wrap container-fluid" role="document">
