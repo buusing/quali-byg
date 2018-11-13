@@ -2,9 +2,9 @@
 <html {!! get_language_attributes() !!}>
   @include('partials.head')
   @if( !is_page('team') )
-    @php($class = 'bg-grey-faded')
+    @php $class = 'bg-grey-faded' @endphp
   @else
-    @php($class = 'bg-white')
+    @php $class = '' @endphp
   @endif
   <body @php body_class($class) @endphp>
     @php do_action('get_header') @endphp
