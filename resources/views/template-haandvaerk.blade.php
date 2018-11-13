@@ -19,7 +19,7 @@
           @endphp
           @foreach($terms as $term)
             <li class="nav-item">
-              <a href="#{{ str_replace('&amp;', 'og', strtolower(str_replace(' ', '-', $term->name))) }}" class="nav-link sub-menu-item">{!! $term->name !!}</a>
+              <a href="#{{ str_replace(',','',str_replace('&amp;', 'og', strtolower(str_replace(' ', '-', $term->name)))) }}" class="nav-link sub-menu-item">{!! $term->name !!}</a>
             </li>
           @endforeach
         </ul>
@@ -28,7 +28,7 @@
   </div>
   <div class="container-fluid">
     @foreach($terms as $index => $term)
-      @php $term_name = str_replace('&amp;', 'og', strtolower(str_replace(' ', '-', $term->name))) @endphp
+      @php $term_name = str_replace(',','', str_replace('&amp;', 'og', strtolower(str_replace(' ', '-', $term->name)))) @endphp
       <div id="{{ $term_name }}" class="row @if($index % 2 == 0) flex-row-reverse @endif" style="background-color: {{ get_field('background_color', $term) }}">
         <div class="col-12 col-md-6 no-padding">
           @php $image = get_field('image', $term) @endphp
