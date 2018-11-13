@@ -7,7 +7,7 @@
   <div class="container">
   <div class="row py-5">
     <div class="col-12 col-md-8 offset-md-2">
-      <h1 class="h2 text-center">{{ App::title() }}</h1>
+      <h1 class="h3 text-center">{{ App::title() }}</h1>
       @if( have_posts())
         @while( have_posts() ) @php the_post() @endphp
           {{ the_content() }}
@@ -27,7 +27,7 @@
           @if( has_post_thumbnail() )
             <img class="img-fluid" src="{{ the_post_thumbnail_url() }}">
           @endif
-          <h3 class="h2 font-weight-normal">{{ the_title() }}</h3>
+          <h3 class="font-weight-normal">{{ the_title() }}</h3>
           {{ the_content() }}
         </div>
       @endwhile
