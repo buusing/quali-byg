@@ -19,7 +19,7 @@
           <div class="d-flex flex-column text-center">
             <p><i class="fas fa-phone"></i></p>
             <p class="mb-0">Erik Damgaard</p>
-            <p>4037 7757</p>
+            <p>4035 7757</p>
           </div>
           <div class="d-flex flex-column text-center">
             <p><i class="fas fa-map-marker-alt"></i></p>
