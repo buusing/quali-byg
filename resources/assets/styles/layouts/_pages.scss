@@ -4,6 +4,10 @@
 
 .teamet {
   background-color: $green-fade;
+
+  .team-title {
+  	font-weight: 700;
+  }
 }
 
 @include media-breakpoint-up(md) {
