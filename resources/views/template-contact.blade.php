@@ -17,18 +17,18 @@
       <div class="col-12 col-md-4">
         <div>
           <div class="d-flex flex-column text-center">
-            <p><i class="fas fa-phone"></i></p>
+            <a href="tel:+4540357757"><i class="fas fa-phone"></i></a>
             <p class="mb-0">Erik Damgaard</p>
             <p>4035 7757</p>
           </div>
           <div class="d-flex flex-column text-center">
-            <p><i class="fas fa-map-marker-alt"></i></p>
+            <a><i class="fas fa-map-marker-alt"></i></a>
             <p class="mb-0">Havrehøjvej 10</p> 
             <p class="mb-0">3751 Østermarie</p>
             <p>Bornholm</p>
           </div>
           <div class="d-flex flex-column text-center">
-            <p><i class="far fa-envelope"></i></p>
+            <a href="mailto:qb@quali-byg.dk"><i class="far fa-envelope"></i></a>
             <a href="mailto:qb@quali-byg.dk">qb@quali-byg.dk</a>
           </div>
         </div>
