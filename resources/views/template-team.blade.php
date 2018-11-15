@@ -27,7 +27,7 @@
           @if( has_post_thumbnail() )
             <img class="img-fluid" src="{{ the_post_thumbnail_url() }}">
           @endif
-          <p class="team-title">{{ the_title() }}</p>
+          <p class="team-title mb-0">{{ the_title() }}</p>
           {{ the_content() }}
         </div>
       @endwhile
