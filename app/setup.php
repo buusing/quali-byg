@@ -305,4 +305,10 @@ add_action( 'wp_ajax_nopriv_get_gallery', function() {
     wp_send_json($output);
 } );
 
+if( function_exists('acf_add_options_page') ) {
+    
+    acf_add_options_page();
+    
+}
+
 

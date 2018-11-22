@@ -3,7 +3,7 @@
 --}}
 @extends('layouts.app')
 @section('content')
-  <div class="py-5">
+  <div class="pt-5">
     @include('partials.page-header')
   </div>
   <div class="container-fluid no-padding">
