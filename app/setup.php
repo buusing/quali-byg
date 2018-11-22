@@ -25,6 +25,10 @@ add_action('wp_enqueue_scripts', function () {
 
     wp_localize_script('sage/main.js', 'ajax_object', $ajax_params);
 
+    if($google_maps_key = the_field('google_maps_api_key', 'option')){
+        wp_enqueue_script('google_maps', "https://maps.googleapis.com/maps/api/js?key={$google_maps_key}&callback=initMap", null, true);
+    }
+
 }, 100);
 
 /**
